@@ -1,0 +1,93 @@
+snippet b "'''...'''" w
+'''${0:${VISUAL:selected text come here}}'''
+endsnippet
+
+snippet bk "{{bk|...}}" w
+\{\{bk|${0:${VISUAL:selected text come here}}\}\}
+endsnippet
+
+snippet code "<code>...</code>" w
+<code>${0:${VISUAL:selected text come here}}</code>
+endsnippet
+
+snippet deb "{{deb|...}}" w
+\{\{deb|${0:${VISUAL:selected text come here}}\}\}
+endsnippet
+
+snippet file "{{file|...}}" w
+\{\{file|${0:${VISUAL:selected text come here}}\}\}
+endsnippet
+
+snippet mwvimplug "mediawiki - vim plugin" w
+{| class=wikitable width=100%
+|-
+|width=72pt|${1:[http://www.vim.org/scripts/script.php?script_id=${2:9999} vim.org]}
+|width=72pt|[${3:https://github.com/owner/plugin} GitHub]
+!width=15%|${4:plugin}
+|${5:Plugin one-line description}
+|-
+|colspan=4|
+{|
+|-
+|{{kb|$0}} || Shortcut
+|}
+|}
+Plugin high-level description, or comment on the configuration.
+<source lang=vim>
+Plug '...'                " Plugin installation
+</source>
+<source lang=vim>
+" Plugin configuration
+</source>
+endsnippet
+
+snippet sob "<source lang=bash>" w
+<source lang=bash>
+${0:${VISUAL:selected text come here}}
+</source>
+endsnippet
+
+snippet soc "<source lang=c>" w
+<source lang=c>
+${0:${VISUAL:selected text come here}}
+</source>
+endsnippet
+
+snippet sot "<source lang=text>" w
+<source lang=c>
+${0:${VISUAL:selected text come here}}
+</source>
+endsnippet
+
+snippet sov "<source lang=vim>" w
+<source lang=vim>
+${0:${VISUAL:selected text come here}}
+</source>
+endsnippet
+
+snippet so "<source lang=$1>" w
+<source lang=${1:text}>
+${0:${VISUAL:selected text come here}}
+</source>
+endsnippet
+
+snippet source "<source lang=$1>" w
+<source lang=${1:text}>
+${0:${VISUAL:selected text come here}}
+</source>
+endsnippet
+
+snippet t "{{template|...}}" w
+\{\{${1:template}|${0:${VISUAL:selected text come here}}\}\}
+endsnippet
+
+snippet tt "<tt>...</tt>" w
+<tt>${0:${VISUAL:selected text come here}}</tt>
+endsnippet
+
+snippet ta "{| class=wikitable" w
+{| class=wikitable
+|-
+|$0
+|}
+endsnippet
