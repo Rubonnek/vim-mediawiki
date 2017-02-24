@@ -51,7 +51,7 @@ if !exists('g:mediawiki_ignored_wikilang')
     let g:mediawiki_ignored_wikilang = []
 endif
 if !exists('g:mediawiki_forced_wikilang')
-    let g:mediawiki_forced_wikilang = []
+    let g:mediawiki_forced_wikilang = ['c','bash']
 endif
 if !exists('g:mediawiki_wikilang_to_vim_overrides')
     let g:mediawiki_wikilang_to_vim_overrides = {}
