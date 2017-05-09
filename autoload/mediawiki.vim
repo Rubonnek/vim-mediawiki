@@ -80,6 +80,7 @@ let s:mediawiki_wikilang_to_vim = {
             \ 'scilab': 'scilab',
             \ 'smalltalk': 'st',
             \ 'sql': 'sql',
+            \ 'text': 'tcl',
             \ 'tcl': 'tcl',
             \ 'vb': 'vb',
             \ 'verilog': 'verilog',
