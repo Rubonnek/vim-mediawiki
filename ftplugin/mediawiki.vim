@@ -62,3 +62,5 @@ augroup MediaWiki
     autocmd Syntax mediawiki call mediawiki#PerformHighlighting()
 augroup END
 
+" Set folding method to expr
+set foldmethod=expr
