@@ -1,21 +1,33 @@
-snippet b "'''...'''" w
-'''${0:${VISUAL:selected text come here}}'''
+snippet bb "'''...''' (bold)" wA
+'''${1:${VISUAL:selected text}}'''$0
 endsnippet
 
-snippet bk "{{bk|...}}" w
-\{\{bk|${0:${VISUAL:selected text come here}}\}\}
+snippet "([a-zA-Z]+)bb" "'''...''' (bold)" ri
+'''`!p snip.rv=match.group(1)`'''
+endsnippet
+
+snippet mm "''emphasize''" wA
+''${1:${VISUAL:selected text}}''$0
+endsnippet
+
+snippet "([a-zA-Z]+)mm" "''...'' (emph)" ri
+''`!p snip.rv=match.group(1)`''
+endsnippet
+
+snippet kb "{{kb|...}}" w
+\{\{kb|${0:${VISUAL:selected text}}\}\}
 endsnippet
 
 snippet code "<code>...</code>" w
-<code>${0:${VISUAL:selected text come here}}</code>
+<code>${1:${VISUAL:selected text}}</code>$0
 endsnippet
 
 snippet deb "{{deb|...}}" w
-\{\{deb|${0:${VISUAL:selected text come here}}\}\}
+\{\{deb|${1:${VISUAL:selected text}}\}\}$0
 endsnippet
 
 snippet file "{{file|...}}" w
-\{\{file|${0:${VISUAL:selected text come here}}\}\}
+\{\{file|${1:${VISUAL:selected text}}\}\}$0
 endsnippet
 
 snippet mwvimplug "mediawiki - vim plugin" w
@@ -43,49 +55,79 @@ endsnippet
 
 snippet sob "<source lang=bash>" w
 <source lang="bash">
-${0:${VISUAL:selected text come here}}
-</source>
+${1:${VISUAL:selected text}}
+</source>$0
+endsnippet
+
+snippet '^sob' "<source lang=bash>" rA
+<source lang="bash">
+${1:${VISUAL:selected text}}
+</source>$0
 endsnippet
 
 snippet soc "<source lang=c>" w
 <source lang="c">
-${0:${VISUAL:selected text come here}}
-</source>
+${1:${VISUAL:selected text}}
+</source>$0
+endsnippet
+
+snippet '^soc' "<source lang=c>" rA
+<source lang="c">
+${1:${VISUAL:selected text}}
+</source>$0
 endsnippet
 
 snippet sot "<source lang=text>" w
 <source lang="text">
-${0:${VISUAL:selected text come here}}
-</source>
+${1:${VISUAL:selected text}}
+</source>$0
+endsnippet
+
+snippet '^sot' "<source lang=text>" rA
+<source lang="text">
+${1:${VISUAL:selected text}}
+</source>$0
 endsnippet
 
 snippet sov "<source lang=vim>" w
 <source lang="vim">
-${0:${VISUAL:selected text come here}}
-</source>
+${1:${VISUAL:selected text}}
+</source>$0
+endsnippet
+
+snippet '^sov' "<source lang=vim>" rA
+<source lang="vim">
+${1:${VISUAL:selected text}}
+</source>$0
 endsnippet
 
 snippet so "<source lang=$1>" w
 <source lang="${1:text}">
-${0:${VISUAL:selected text come here}}
-</source>
+${2:${VISUAL:selected text}}
+</source>$0
 endsnippet
 
 snippet source "<source lang=$1>" w
 <source lang="${1:text}">
-${0:${VISUAL:selected text come here}}
-</source>
+${2:${VISUAL:selected text}}
+</source>$0
 endsnippet
 
-snippet t "{{template|...}}" w
-\{\{${1:template}|${0:${VISUAL:selected text come here}}\}\}
+snippet '^source' "<source lang=$1>" w
+<source lang="${1:text}">
+${2:${VISUAL:selected text}}
+</source>$0
+endsnippet
+
+snippet tem "{{template|...}}" w
+\{\{${1:template}|${2:${VISUAL:selected text}}\}\}$0
 endsnippet
 
 snippet tt "<tt>...</tt>" w
-<tt>${0:${VISUAL:selected text come here}}</tt>
+<tt>${1:${VISUAL:selected text}}</tt>$0
 endsnippet
 
-snippet ta "{| class=wikitable" w
+snippet tab "{| class=wikitable" w
 {| class=wikitable
 |-
 |$0
