@@ -123,6 +123,19 @@ snippet tem "{{template|...}}" w
 \{\{${1:template}|${2:${VISUAL:selected text}}\}\}$0
 endsnippet
 
+snippet blue "{{blue|...}}" w
+\{\{blue|${0:${VISUAL:selected text}}\}\}
+endsnippet
+
+snippet green "{{green|...}}" w
+\{\{red|${0:${VISUAL:selected text}}\}\}
+endsnippet
+
+snippet red "{{red|...}}" w
+\{\{red|${0:${VISUAL:selected text}}\}\}
+endsnippet
+
+
 snippet tt "<tt>...</tt>" w
 <tt>${1:${VISUAL:selected text}}</tt>$0
 endsnippet
@@ -132,4 +145,8 @@ snippet tab "{| class=wikitable" w
 |-
 |$0
 |}
+endsnippet
+
+snippet --- "--- &mdash;" A
+&mdash; 
 endsnippet
